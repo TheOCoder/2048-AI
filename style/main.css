@@ -627,6 +627,13 @@ font-size: 10px; } }
   .tile-container {
     position: absolute;
     z-index: 2; }
+    
+    #ai-level-container{
+      margin: 20px auto;
+    }
+    #ai-level-container input{
+      margin: 10px 10px 0px 10px;
+    }
 
   .tile {
     width: 57.5px;
