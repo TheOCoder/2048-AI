@@ -1,5 +1,6 @@
 function HTMLActuator() {
   this.tileContainer    = document.getElementsByClassName("tile-container")[0];
+  this.bestScoreContainer   = document.getElementsByClassName("score-container")[0];
   this.scoreContainer   = document.getElementsByClassName("score-container")[0];
   this.messageContainer = document.getElementsByClassName("game-message")[0];
   this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
@@ -90,11 +91,13 @@ HTMLActuator.prototype.positionClass = function (position) {
 
 HTMLActuator.prototype.updateScore = function (score) {
   this.clearContainer(this.scoreContainer);
+  this.clearContainer(this.bestScoreContainer);
 
   var difference = score - this.score;
   this.score = score;
 
   this.scoreContainer.textContent = this.score;
+  this.bestScoreContainer.textContent = this.score;
 
   if (difference > 0) {
     var addition = document.createElement("div");
@@ -102,6 +105,7 @@ HTMLActuator.prototype.updateScore = function (score) {
     addition.textContent = "+" + difference;
 
     this.scoreContainer.appendChild(addition);
+    this.bestScoreContainer.appendChild(addition);
   }
 };
 
