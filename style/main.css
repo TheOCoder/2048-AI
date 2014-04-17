@@ -629,6 +629,7 @@ font-size: 10px; } }
     z-index: 2; }
     
     #ai-level-container{
+      display: block;
       margin: 20px auto;
     }
     #ai-level-container input{
