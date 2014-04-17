@@ -1,3 +1,4 @@
+autoUpdateDelay = 1;
 animationDelay = 100;
 minSearchTime = 100;
 
