@@ -93,7 +93,7 @@ GameManager.prototype.run = function() {
       for (var j=0; j<this.grid.size; j++) 
         if((this.grid.cells[i][j]!=null)&&(this.grid.cells[i][j].value>biggestCell)) biggestCell = this.grid.cells[i][j].value;
     
-    minSearchTime = 30+10*Math.pow(2, Math.floor(Math.log(biggestCell)/Math.log(2)))/128;
+    minSearchTime = 30+20*Math.pow(2, Math.floor(Math.log(biggestCell)/Math.log(2)))/128;
     animationDelay = minSearchTime+1;
   }
   var timeout = animationDelay;
