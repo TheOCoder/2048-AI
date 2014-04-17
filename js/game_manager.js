@@ -87,6 +87,15 @@ GameManager.prototype.move = function(direction) {
 GameManager.prototype.run = function() {
   var best = this.ai.getBest();
   this.move(best.move);
+  if (autoUpdateDelay){
+    var biggestCell = 0; 
+    for (var i=0; i<this.grid.size; i++)
+      for (var j=0; j<this.grid.size; j++) 
+        if((this.grid.cells[i][j]!=null)&&(this.grid.cells[i][j].value>biggestCell)) biggestCell = this.grid.cells[i][j].value;
+    
+    minSearchTime = 30+10*Math.pow(2, Math.floor(Math.log(biggestCell)/Math.log(2)))/128;
+    animationDelay = minSearchTime+1;
+  }
   var timeout = animationDelay;
   if (this.running && !this.over && !this.won) {
     var self = this;
