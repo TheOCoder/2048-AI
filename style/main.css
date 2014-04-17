@@ -628,13 +628,14 @@ font-size: 10px; } }
     position: absolute;
     z-index: 2; }
     
-    #ai-level-container{
+    .ai-level-container{
       display: block;
       margin: 20px auto;
       float: left;
+      clear: both;
     }
-    #ai-level-container input{
-      margin: 10px 10px 0px 10px;
+    .ai-level{
+      margin: -30px 10px 0px 10px;
     }
 
   .tile {
