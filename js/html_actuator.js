@@ -4,6 +4,7 @@ function HTMLActuator() {
   this.scoreContainer   = document.getElementsByClassName("score-container")[0];
   this.messageContainer = document.getElementsByClassName("game-message")[0];
   this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
+  this.aiLevelSlider = document.getElementsByClassName("ai-level")[0];
 
   this.score = 0;
 }
