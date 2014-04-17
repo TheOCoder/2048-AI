@@ -233,6 +233,16 @@ hr {
   .grid-cell:last-child {
     margin-right: 0; }
 
+.ai-level-container{
+      display: block;
+      margin: 20px auto;
+      float: left;
+      clear: both;
+    }
+    .ai-level{
+      margin: -30px 10px 0px 10px;
+    }
+    
 .tile-container {
   position: absolute;
   z-index: 2; }
